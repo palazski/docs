@@ -1,0 +1,86 @@
+{
+  "projectType": "saas",
+  "projectName": "NodePad",
+  "projectDescription": "A node-based canvas workspace for AI chat that lets you fork, branch, and merge conversations across multiple models in one place.",
+  "theme": "willow",
+  "primaryColor": "#040404",
+  "lightColor": "#ffffff",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "beta-access"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/canvas",
+              "concepts/nodes",
+              "concepts/forking",
+              "concepts/merging",
+              "concepts/sticky-notes"
+            ]
+          },
+          {
+            "group": "Working with Models",
+            "pages": [
+              "models/overview",
+              "models/per-message-selection",
+              "models/bring-your-own-keys"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "use-cases/research",
+              "use-cases/engineering",
+              "use-cases/writing"
+            ]
+          },
+          {
+            "group": "Enterprise",
+            "pages": [
+              "enterprise/overview",
+              "enterprise/self-hosting",
+              "enterprise/sso-scim",
+              "enterprise/air-gapped",
+              "enterprise/audit-rbac"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Node-based canvas for organizing AI conversations spatially",
+    "Fork any message to branch a conversation thread",
+    "Merge separate threads into a unified synthesis node",
+    "Run multiple AI models in parallel on the same canvas",
+    "Per-message model selection (Claude, GPT-5, Gemini, open-source)",
+    "Sticky notes for pinning context constraints to nodes",
+    "Enterprise self-hosting with air-gapped deployment support",
+    "SSO/SCIM, RBAC, and full audit logging for enterprise teams"
+  ],
+  "publicApiSurface": [
+    "Canvas workspace",
+    "Chat threads / nodes",
+    "Fork action",
+    "Merge action",
+    "Sticky notes",
+    "Model selector (per message)",
+    "Bring Your Own Keys (BYOK)",
+    "Custom inference endpoints (Ollama, vLLM, Bedrock, Vertex)",
+    "SSO (SAML/OIDC)",
+    "SCIM directory provisioning",
+    "RBAC roles",
+    "Activity audit log"
+  ]
+}

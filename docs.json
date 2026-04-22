@@ -1,0 +1,81 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "NodePad",
+  "theme": "willow",
+  "colors": {
+    "primary": "#040404",
+    "light": "#ffffff"
+  },
+  "favicon": "https://media.brand.dev/1360dff2-09d8-47f4-b68b-035d25cb0765.svg",
+  "font": {
+    "headings": {
+      "family": "Outfit"
+    },
+    "body": {
+      "family": "Outfit"
+    }
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Join the Beta",
+      "href": "https://node-pad.com/beta"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "beta-access"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/canvas",
+              "concepts/nodes",
+              "concepts/forking",
+              "concepts/merging",
+              "concepts/sticky-notes"
+            ]
+          },
+          {
+            "group": "Working with Models",
+            "pages": [
+              "models/overview",
+              "models/per-message-selection",
+              "models/bring-your-own-keys"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "use-cases/research",
+              "use-cases/engineering",
+              "use-cases/writing"
+            ]
+          },
+          {
+            "group": "Enterprise",
+            "pages": [
+              "enterprise/overview",
+              "enterprise/self-hosting",
+              "enterprise/sso-scim",
+              "enterprise/air-gapped",
+              "enterprise/audit-rbac"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {}
+  }
+}

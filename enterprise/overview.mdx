@@ -1,0 +1,62 @@
+---
+title: "NodePad Enterprise: self-hosted for regulated teams"
+description: "NodePad Enterprise gives security-conscious and regulated organizations full control over their data, identity, and infrastructure — with no compromises."
+---
+
+NodePad Enterprise is designed for organizations that cannot send data to third-party infrastructure, operate in regulated industries, or have compliance requirements that a standard SaaS product cannot meet. It includes everything in the public beta, plus the controls you need to run NodePad entirely on your own terms — in your VPC, behind your firewall, with your identity provider and your model endpoints.
+
+<Note>
+  NodePad Enterprise is separate from the public beta. The beta runs on NodePad-managed cloud infrastructure. Enterprise deployments run on **your** infrastructure, under **your** control.
+</Note>
+
+## What's included
+
+Every Enterprise deployment includes the full set of security, identity, and compliance features listed below. There are no tiers within Enterprise — when you deploy NodePad in your environment, you get everything.
+
+<CardGroup cols={2}>
+  <Card title="Self-hosting" icon="server" href="/enterprise/self-hosting">
+    Deploy NodePad inside your own VPC. Bring your own cloud infrastructure, keys, and model endpoints.
+  </Card>
+  <Card title="SSO + SCIM" icon="id-card" href="/enterprise/sso-scim">
+    Enforce single sign-on via SAML 2.0 or OIDC, and automate user provisioning with SCIM directory sync.
+  </Card>
+  <Card title="Air-gapped deployment" icon="shield-halved" href="/enterprise/air-gapped">
+    Run NodePad with zero egress. Models execute entirely inside your network perimeter.
+  </Card>
+  <Card title="Audit logs + RBAC" icon="clipboard-list" href="/enterprise/audit-rbac">
+    Full activity logging with exportable audit trails, and granular role-based access control.
+  </Card>
+</CardGroup>
+
+## Who Enterprise is for
+
+NodePad Enterprise is built for teams where data sovereignty is non-negotiable:
+
+- **Regulated industries** — healthcare, finance, legal, and government organizations subject to HIPAA, SOC 2, FedRAMP, or similar frameworks
+- **Defense and intelligence** — teams operating in classified or air-gapped environments
+- **Enterprises with existing identity infrastructure** — organizations that require SSO and automated user lifecycle management
+- **Teams with custom model requirements** — organizations running their own inference endpoints via Ollama, vLLM, Amazon Bedrock, or Google Vertex AI
+
+## Your data stays yours
+
+NodePad never trains on your conversations. On the Enterprise plan, your data never leaves your infrastructure at all — it stays inside the environment you control, subject to the policies you set.
+
+<AccordionGroup>
+  <Accordion title="What about the beta — is my data safe there?">
+    Yes. Even on the public beta, NodePad does not train models on your conversations. The beta runs on NodePad-managed cloud infrastructure, so data is processed on NodePad's servers. Enterprise deployments eliminate this entirely — your data never leaves your network.
+  </Accordion>
+  <Accordion title="Can I bring my own model API keys?">
+    Yes. Enterprise lets you connect your own keys for external model providers, or point NodePad at your own inference endpoints running Ollama, vLLM, Amazon Bedrock, or Google Vertex AI.
+  </Accordion>
+  <Accordion title="Is air-gapped deployment really supported?">
+    Yes. NodePad is designed from the ground up to support fully air-gapped deployments. No outbound calls are required once the software is installed in your environment.
+  </Accordion>
+</AccordionGroup>
+
+## Get started
+
+NodePad Enterprise is available by contacting the team directly. There's no self-serve sign-up — the team works with you to understand your infrastructure, compliance requirements, and deployment model before you go live.
+
+<Card title="Contact the Enterprise team" icon="envelope" href="https://node-pad.com/enterprise">
+  Tell us about your environment and requirements. The team will walk you through deployment options and next steps.
+</Card>

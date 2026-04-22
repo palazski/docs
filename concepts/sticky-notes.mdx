@@ -1,0 +1,72 @@
+---
+title: "Sticky notes: keep context constraints on any node"
+description: "Attach a sticky note to any node to inject a persistent instruction — tone, format, scope — into the thread's context without repeating yourself each message."
+---
+
+Sticky notes attach to any node on the canvas and inject a persistent constraint into the conversation context for every message that follows in that thread. Instead of re-stating "keep this blameless" or "respond in bullet points" with every prompt, you pin it once and it stays in scope.
+
+## What a sticky note does
+
+When you attach a sticky note to a node, NodePad includes its content as a standing instruction in the context for all subsequent messages in that thread. The model reads the sticky note alongside your messages — you don't have to repeat the constraint yourself. The sticky note is visible on the canvas below the node it's attached to, so you always know what's in effect.
+
+<Info>
+  A sticky note affects messages that come **after** the node it's attached to. It does not alter any existing replies that were generated before the note was added.
+</Info>
+
+## What to put in a sticky note
+
+Sticky notes work best for constraints that are stable across many turns of a conversation. One clear constraint per note keeps things legible.
+
+<CardGroup cols={2}>
+  <Card title="Tone constraints" icon="comment">
+    Keep responses non-judgmental and blameless. Use neutral language throughout. Avoid hedging phrases like "it depends."
+  </Card>
+  <Card title="Format requirements" icon="list">
+    Respond in bullet points only. Keep each response under 150 words. Always include a summary line at the top.
+  </Card>
+  <Card title="Scope limits" icon="border-all">
+    Only consider open-source solutions. Do not suggest changes to the database schema. Limit recommendations to the current sprint.
+  </Card>
+  <Card title="Role or persona" icon="user">
+    You are reviewing this as a skeptical senior engineer. Respond as a non-technical stakeholder would expect to receive this.
+  </Card>
+</CardGroup>
+
+## How to attach a sticky note
+
+<Steps>
+  <Step title="Hover the node you want to attach to">
+    Move your cursor over the target node. The action menu appears at the edge of the node.
+  </Step>
+  <Step title="Select Sticky note">
+    Click the sticky note action. An input field opens directly below the node on the canvas.
+  </Step>
+  <Step title="Write your constraint">
+    Type the instruction you want to persist. Keep it direct — write it the way you'd write a system prompt, not a conversational message.
+  </Step>
+  <Step title="Confirm">
+    Save the note. It appears pinned to the node, and its constraint is now active for all subsequent messages in the thread.
+  </Step>
+</Steps>
+
+## Editing and removing sticky notes
+
+You can edit a sticky note at any time by clicking it on the canvas. Changes take effect for messages generated after the edit — replies already in the thread are not affected.
+
+To remove a sticky note, click it and select **Remove**. The constraint is lifted immediately; subsequent messages will no longer include it in context.
+
+<Tip>
+  If you want to apply different constraints to two variations of the same conversation, fork the thread first, then attach separate sticky notes to each branch. This keeps your experiments clean and comparable.
+</Tip>
+
+## Sticky notes vs. putting instructions in your message
+
+You can always type constraints directly into a message prompt — that's the simplest approach for a one-time instruction. Sticky notes are worth using when:
+
+- The constraint needs to hold for more than one or two replies
+- You're sharing the canvas with a collaborator and want the constraint to be visible and explicit
+- You're forking the thread and want the constraint to be clearly scoped to one branch
+
+<Warning>
+  Sticky notes do not carry over when you fork. If you fork a thread from a node that has a sticky note attached, the branch starts without that constraint. Attach a new sticky note to the fork's first node if you want the same constraint in the branch.
+</Warning>

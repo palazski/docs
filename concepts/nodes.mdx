@@ -1,0 +1,57 @@
+---
+title: "Nodes: the building blocks of every NodePad thread"
+description: "A node is a single message or reply on the canvas. Every action in NodePad — forking, merging, sticky notes — begins by pointing at a specific node."
+---
+
+A node is the smallest piece of content on the canvas: one message you send, or one reply the model generates. Nodes link together into threads, threads live on the canvas, and every action that gives NodePad its power — forking a branch, attaching a sticky note, merging results — begins by pointing at a specific node.
+
+## Anatomy of a node
+
+Every node on the canvas has the same basic structure regardless of which model produced it or where it sits in a thread.
+
+<AccordionGroup>
+  <Accordion title="The message content">
+    The text of the message or reply, rendered with full Markdown support. Long replies collapse to a preview with an option to expand, so the canvas doesn't become unwieldy.
+  </Accordion>
+  <Accordion title="The model indicator">
+    A label showing which model generated the reply — Claude, GPT-5, Gemini, or an open-source model. You can change the model for the next reply at any time.
+  </Accordion>
+  <Accordion title="The action menu">
+    Hover a node to reveal its action menu: fork, attach a sticky note, copy, or start a merge from this point. Everything you can do with a node is one click away.
+  </Accordion>
+  <Accordion title="Sticky notes">
+    Any sticky notes attached to a node are displayed inline below the node content. They persist visually so you always know what constraints are active.
+  </Accordion>
+</AccordionGroup>
+
+## How nodes form threads
+
+Nodes connect sequentially: your message, then the model's reply, then your next message, and so on. That chain of connected nodes is a thread. Threads appear as vertical columns on the canvas, and you can have as many threads as your work demands.
+
+When you fork a node, a new thread branches off from that point. The forked thread inherits all the context from every node above the fork — it just grows in a new direction from there.
+
+<Info>
+  The node you fork from stays part of the original thread. Forking never removes or alters existing nodes — it only creates new ones.
+</Info>
+
+## What you can do from any node
+
+<CardGroup cols={3}>
+  <Card title="Fork" icon="code-branch" href="/concepts/forking">
+    Create a new branch that starts with the same context as the current thread up to this point.
+  </Card>
+  <Card title="Attach a sticky note" icon="note-sticky" href="/concepts/sticky-notes">
+    Pin a constraint — tone, format, scope — that persists for all subsequent messages in this thread.
+  </Card>
+  <Card title="Merge" icon="merge" href="/concepts/merging">
+    Begin a merge from this node, bringing a result from another thread into a new synthesis node.
+  </Card>
+</CardGroup>
+
+## Nodes are non-destructive
+
+No action you take on a node — forking, merging, attaching a sticky note — modifies the node itself. Your conversation history is always intact. You can revisit any node in any thread at any time and continue from that point.
+
+<Tip>
+  If you want to try a completely different approach to a question without losing your current progress, fork from the node immediately before your last prompt. The fork starts fresh from that context without touching the original thread.
+</Tip>
