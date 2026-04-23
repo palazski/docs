@@ -6,6 +6,41 @@ rss: true
 
 New features, behavior changes, and notable fixes for NodePad. Subscribe via the RSS button at the top of this page to follow along without checking back.
 
-<Note>
-  The first public release — **v0.1.0** — is imminent. This page will be populated with each tagged release. In the meantime, see NodePad's [GitHub Releases](https://github.com/palazski/nodepad-api/releases) for raw engineering changelogs.
-</Note>
+<Update label="April 23, 2026" description="v0.1.0 — first public release" tags={["Canvas", "Models", "Enterprise"]}>
+  ## Hello, NodePad 👋
+
+  v0.1.0 is the first tagged public release — the canvas workspace for AI chat is out of the lab and into closed beta. Everything below is live in the app today.
+
+  ## What's in v0.1.0
+
+  ### Canvas + nodes
+  - A **spatial canvas** instead of a linear chat thread. Conversations become objects you can move, arrange, and return to later.
+  - **Multiple AI threads side-by-side** on one canvas — no more lost browser tabs.
+  - Open the [Canvas concept page](/concepts/canvas) for the basics.
+
+  ### Forking and branch merging
+  - **Fork any message** into a new branch with the full prior context intact — explore a tangent without losing your main line.
+  - **Branch merging** recombines two or more threads into a single synthesis, with `@`-references, drag-to-merge, and multi-source compose. See [Forking](/concepts/forking) and [Merging](/concepts/merging).
+
+  ### Sticky notes for persistent context
+  - Pin a constraint, tone rule, or style guide directly on a node. The model reads it as context for every message in that thread — you don't repeat yourself. [Sticky notes →](/concepts/sticky-notes)
+
+  ### Models — Claude + GPT, switchable per message
+  - Native support for Anthropic's Claude family (Opus 4, Sonnet 4.5, Haiku 3.5) and OpenAI's GPT family (GPT-5 nano, GPT-4o, GPT-4o mini).
+  - **Switch models mid-thread** — a single message can run on a different model from the one before it. [Per-message model selection →](/models/per-message-selection)
+  - **Parallel execution** — open two threads with different models, ask the same question, compare side by side.
+
+  ### Bring your own keys
+  - Connect your own Anthropic or OpenAI API key in Settings. Usage bills to your account, prompts route through your provider contract. [BYOK →](/models/bring-your-own-keys)
+
+  ### Enterprise — self-hosting is real
+  - Install NodePad inside your own VPC with **Helm** (Kubernetes) or **docker compose** (single VM). BYO Postgres, Redis, and S3-compatible object storage. [Install guide →](/enterprise/operations/install)
+  - **Offline / air-gap install** bundle with docker save tarballs, Helm chart, and compose file — no internet required to install or upgrade. [Air-gap walkthrough →](/enterprise/operations/air-gapped)
+  - **Zero outbound telemetry** by default — NodePad makes no network calls of its own unless an operator explicitly sets `NODEPAD_POSTHOG_KEY`. User-initiated LLM calls go only to providers the operator configured.
+  - Every release is **rehearsed on a throwaway Kubernetes cluster** in CI before the image tags are allowed to publish.
+
+  ## What's next
+  The roadmap includes SSO/SCIM, audit logs, RBAC, and local inference endpoints (Ollama, vLLM, Bedrock, Vertex) for enterprise. Follow this page — or the [RSS feed](/changelog/rss.xml) — for updates.
+
+  Try NodePad at [node-pad.com/beta](https://node-pad.com/beta).
+</Update>
